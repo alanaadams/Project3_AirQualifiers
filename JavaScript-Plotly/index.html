@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.3.0/chart.min.js"></script> -->
+    <title>HTML | DOM Style textAlign center </title>
+    <title>Events</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+     
+        h1 {text-align: center;}
+        p {text-align: center;}
+        div {text-align: center;}
+    </style>
+</head>
+<body>
+    <div class="rectangle">
+        <div class="row">
+          <div class="col-md-12 jumbotron text-center">
+            <h1>Team: Air Qualifiers - NA Air Quality Metrics analysis </h1>
+            <h2 class="title">Bar charts for North America showing multiple air quality metrics</h2>
+          </div>
+        </div>
+    </div>
+  <!-- <div class="row">  -->
+  <div id="plot"></div>
+
+  <select id="selParameter">
+    <option value="dataset1">barpm10</option>
+    <option value="dataset2">barpm25</option>
+    <option value="dataset3">bartemp</option>
+    <option value="dataset4">barpres</option>
+  </select>
+ 
+    <div class="chart-wrap horizontal">
+      <h3 class='display-4'>Graphs</h3>
+        <div class='graph-container'>
+           <div id="plotpm10"></div>
+           <div id="plotpm25"></div> 
+           <div id="plottemp"></div>
+           <div id="plotpres"></div>    
+  </div>
+  <script src="output.js"></script>
+  <script src=".\static\js\app.js"></script>
+</body>
+</html>
+
+
+ 

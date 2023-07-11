@@ -1,0 +1,50 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+.rectangle {
+  height: 100px;
+  width: 250px;
+  color: white;
+  display: flex;
+  background-color: rgb(77, 77, 77);
+  border-radius: 7px;
+  justify-content: center;
+  align-items: center;
+}
+#map,
+body,
+
+
+html {
+  height: 100%;
+}
+.graph-container {
+  display: flex;
+}
+
+#plotpm10 {
+  flex: 1;
+  width: 50px;
+  height: 50px;
+  background-color: #FF0000;
+}
+
+#plotpm25 {
+  flex: 1;
+  width: 50px;
+  height: 50px;
+  background-color: #0000FF;
+}
+#plottemp {
+  flex: 1;
+  width: 50px;
+  height: 50px;
+  background-color: #0000FF;
+}
+#plotpres {
+  flex: 1;
+  width: 50px;
+  height: 50px;
+  background-color: #0000FF;
+}

@@ -1,4 +1,4 @@
- [
+let data = [
   {
     parameter: "um025",
     value: "0.02",
