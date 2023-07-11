@@ -6,7 +6,7 @@ SELECT * FROM measurements_flattened;
 
 -- List the parameter, value, unit, country, latitude and longitude of each US location for 5 select parameters (temperature, humidity, pressure, pm10, and pm25)
 CREATE VIEW US_measurements AS
-SELECT measurements_flattened.country, parameters_cleaned.displayName, measurements_flattened.value, measurements_flattened.unit, salaries.salary, measurements_flattened.latitude, measurements_flattened.longitude
+SELECT measurements_flattened.country, parameters_cleaned.description, measurements_flattened.value, measurements_flattened.unit, measurements_flattened.latitude, measurements_flattened.longitude
 FROM measurements_flattened
 INNER JOIN parameters_cleaned ON
 measurements_flattened.parameter=parameters_cleaned.name
@@ -25,7 +25,7 @@ DROP VIEW US_measurements;
 
 -- List the parameter, value, unit, country, latitude and longitude of each Canadian location for 5 select parameters (temperature, humidity, pressure, pm10, and pm25)
 CREATE VIEW CA_measurements AS
-SELECT measurements_flattened.country, parameters_cleaned.displayName, measurements_flattened.value, measurements_flattened.unit, salaries.salary, measurements_flattened.latitude, measurements_flattened.longitude
+SELECT measurements_flattened.country, parameters_cleaned.description, measurements_flattened.value, measurements_flattened.unit, measurements_flattened.latitude, measurements_flattened.longitude
 FROM measurements_flattened
 INNER JOIN parameters_cleaned ON
 measurements_flattened.parameter=parameters_cleaned.name
@@ -87,15 +87,3 @@ FROM CA_locations;
 -- Drop view
 DROP VIEW CA_locations;
 
---List the latitude and longitude of each Mexican location
-CREATE VIEW MX_locations AS
-SELECT locations_cleaned.name, locations_cleaned.country, measurements_flattened.latitude, measurements_flattened.longitude
-FROM measurements_flattened
-INNER JOIN locations_cleaned ON
-locations_cleaned.coordinates=measurements_flattened.coordinates
-WHERE measurements_flattened.country = 'MX';
--- Query the table view created
-SELECT *
-FROM MX_locations;
--- Drop view
-DROP VIEW MX_locations;

@@ -21,19 +21,16 @@ CREATE TABLE "parameters_cleaned" (
     "description" VARCHAR   NOT NULL,
     "preferredUnit" VARCHAR   NOT NULL,
     CONSTRAINT "pk_parameters_cleaned" PRIMARY KEY (
-        "id"
+        "name"
      )
 );
 
 CREATE TABLE "locations_cleaned" (
-    "id" INT   NOT NULL,
-    "name" VARCHAR   NOT NULL,
     "country" VARCHAR   NOT NULL,
     "coordinates" VARCHAR   NOT NULL,
-    "lastUpdated" DATE   NOT NULL,
-    "measurements" INT   NOT NULL,
+    "location" VARCHAR   NOT NULL,
     CONSTRAINT "pk_locations_cleaned" PRIMARY KEY (
-        "id"
+        "coordinates"
      )
 );
 
@@ -52,15 +49,14 @@ CREATE TABLE "measurements_flattened" (
 ALTER TABLE "locations_cleaned" ADD CONSTRAINT "fk_locations_cleaned_country" FOREIGN KEY("country")
 REFERENCES "countries" ("id");
 
-ALTER TABLE "measurements_flattened" ADD CONSTRAINT "fk_measurements_flattened_parameter_unit" FOREIGN KEY("parameter", "unit")
-REFERENCES "parameters_cleaned" ("name", "preferredUnit");
-
-ALTER TABLE "measurements_flattened" ADD CONSTRAINT "fk_measurements_flattened_location_coordinates" FOREIGN KEY("location", "coordinates")
-REFERENCES "locations_cleaned" ("name", "coordinates");
+ALTER TABLE "measurements_flattened" ADD CONSTRAINT "fk_measurements_flattened_parameter" FOREIGN KEY("parameter")
+REFERENCES "parameters_cleaned" ("name");
 
 ALTER TABLE "measurements_flattened" ADD CONSTRAINT "fk_measurements_flattened_country" FOREIGN KEY("country")
 REFERENCES "countries" ("id");
 
+ALTER TABLE "measurements_flattened" ADD CONSTRAINT "fk_measurements_flattened_coordinates" FOREIGN KEY("coordinates")
+REFERENCES "locations_cleaned" ("coordinates");
 
 
 -- Verify successful data import
@@ -68,3 +64,4 @@ SELECT * FROM countries;
 SELECT * FROM parameters_cleaned;
 SELECT * FROM locations_cleaned;
 SELECT * FROM measurements_flattened;
+
