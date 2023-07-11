@@ -1,38 +1,20 @@
 id,name,displayName,description,preferredUnit
 1,pm10,PM10,Particulate matter less than 10 micrometers in diameter mass concentration,µg/m³
 2,pm25,PM2.5,Particulate matter less than 2.5 micrometers in diameter mass concentration,µg/m³
-3,o3,O₃ mass,Ozone mass concentration,µg/m³
-4,co,CO mass,Carbon Monoxide mass concentration,µg/m³
-5,no2,NO₂ mass,Nitrogen Dioxide mass concentration,µg/m³
 6,so2,SO₂ mass,Sulfur Dioxide mass concentration,µg/m³
-7,no2,NO₂,Nitrogen Dioxide concentration,ppm
-8,co,CO,Carbon Monoxide concentration,ppm
-9,so2,SO₂,Sulfur Dioxide concentration,ppm
-10,o3,O₃,Ozone concentration,ppm
-11,bc,BC,Black Carbon mass concentration,µg/m³
-14,co2,CO2,CO2,umol/mol
 15,no2,NO₂,NO₂,ppb
-17,bc,BC,BC,ng/m3
 19,pm1,PM1,Particulate matter less than 1 micrometer in diameter mass concentration,µg/m³
 21,co2,CO₂,Carbon Dioxide concentration,ppm
 22,wind_direction,wd,Direction that the wind originates from,deg
-23,nox,NOX,NOX,ppb
-24,no,NO,NO,ppb
 25,rh,RH,RH,%
-27,nox,NOx mass,Nitrogen Oxides mass concentration,µg/m³
 28,ch4,CH₄,Methane concentration,ppm
-29,pn,,n/a,particles/cm³
+29,pn,pn,n/a,particles/cm³
 32,o3,O₃,O₃,ppb
 33,ufp,UFP count,Ultrafine Particles count concentration,particles/cm³
 34,wind_speed,ws,Average wind speed in meters per second,m/s
-35,no,NO,Nitrogen Monoxide concentration,ppm
 36,pm,PM,PM,µg/m³
 37,ambient_temp,T,T,deg_c
-95,pressure,atm,Atmospheric or barometric pressure,hpa
-97,pm25-old,,n/a,ugm3
 98,relativehumidity,RH,RH,%
-100,temperature,T,T,c
-101,so2,SO₂,SO₂,ppb
 102,co,CO,CO,ppb
 125,um003,PM0.3 count,PM0.3 count,particles/cm³
 126,um010,PM1 count,PM1 count,particles/cm³
@@ -40,7 +22,7 @@ id,name,displayName,description,preferredUnit
 129,um050,PM5.0 count,PM5.0 count,particles/cm³
 130,um025,PM2.5 count,PM2.5 count,particles/cm³
 131,pm100,PM100,PM100,µg/m³
-132,pressure,,n/a,mb
+132,pressure,pressure,n/a,mb
 133,um005,PM0.5,PM0.5,particles/cm³
 134,humidity,H,H,%
 135,um100,PM10 count,PM10 count,particles/cm³
@@ -62,4 +44,3 @@ id,name,displayName,description,preferredUnit
 19857,fe,Fe,Iron,ppb
 19858,ni,Ni,Nickle,ppb
 19859,v,V,Vanadium,ppb
-19860,pm25,,n/a,ppm
